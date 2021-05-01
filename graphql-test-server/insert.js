@@ -1,7 +1,5 @@
-const knex = require('./db')
-const Cite = require('citation-js')
-
-
+const knex = require("./db");
+const Cite = require("citation-js");
 
 let cite_1 = `{
     "issued": {
@@ -23,9 +21,7 @@ let cite_1 = `{
     "source": null,
     "abstract": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
     "type": "motion_picture"
-}`
-
-
+}`;
 
 let cite_2 = `{
   "id": "http://example.org/id/1234",
@@ -38,7 +34,7 @@ let cite_2 = `{
     { "family": "Kafka", "given": "Franz" }
   ],
   "issued": { "date-parts": [ [ "1926" ] ] }
-}`
+}`;
 
 let cite_3 = ` {
     "DOI": "10.1371/journal.pone.0010676",
@@ -95,9 +91,9 @@ let cite_3 = ` {
     "title": "Biodiversity Assessment of the Fishes of Saba Bank Atoll, Netherlands Antilles",
     "type": "article-journal",
     "volume": "5"
-  }`
+  }`;
 
-  let cite_4 = `{
+let cite_4 = `{
     "id": "Q23571040",
     "type": "article-journal",
     "title": "Correlation of the Base Strengths of Amines 1",
@@ -117,10 +113,9 @@ let cite_3 = ` {
     "volume": "79",
     "issue": "20",
     "page": "5441-5444"
-  }`
+  }`;
 
-
-  let cite_5 = `{
+let cite_5 = `{
       "id": "ITEM-1",
       "title": "Boundaries of Dissent: Protest and State Power in the Media Age",
       "author": [
@@ -141,11 +136,9 @@ let cite_3 = ` {
         ]
       },
       "type": "book"
-    }`
+    }`;
 
-
-
-  let cite_6 = `{
+let cite_6 = `{
       "id": "ITEM-3",
       "title": "Key Process Conditions for Production of C<sub>4</sub> Dicarboxylic Acids in Bioreactor Batch Cultures of an Engineered <i>Saccharomyces cerevisiae</i> Strain",
       "note": "This cite illustrates the rich text formatting capabilities in the new processor, as well as page range collapsing (in this case, applying the collapsing method required by the Chicago Manual of Style).  Also, as the IEEE example above partially illustrates, we also offer robust handling of particles such as \\"van\\" and \\"de\\" in author names.",
@@ -187,10 +180,9 @@ let cite_3 = ` {
       "issue": "3",
       "DOI": "10.1128/AEM.02396-09",
       "type": "article-journal"
-    }`
+    }`;
 
-
-  let cite_7 = `{
+let cite_7 = `{
       "id": "ITEM-2",
       "author": [
         {
@@ -215,9 +207,9 @@ let cite_3 = ` {
       },
       "type": "article-journal",
       "note": "Note the flip-flop behavior of the quotations marks around \\"informal\\" in the title of this citation.  This works for quotation marks in any style locale.  Oh, and, uh, these notes illustrate the formatting of annotated bibliographies (!)."
-    }`
+    }`;
 
-  let cite_8 = `{
+let cite_8 = `{
       "id": "ITEM-4",
       "author": [
         {
@@ -238,9 +230,9 @@ let cite_3 = ` {
           ]
         ]
       }
-    }`
+    }`;
 
-  let cite_9 = `{
+let cite_9 = `{
       "id": "ITEM-5",
       "author": [
         {
@@ -343,8 +335,8 @@ let cite_3 = ` {
       },
       "note": "Note the transformations to which this cite is subjected in the samples above, and the fact that it appears in the correct sort position in all rendered forms.  Selection of multi-lingual content can be configured in the style, permitting one database to serve a multi-lingual author in all languages in which she might publish.",
       "type": "article-journal"
-    }`
-  let cite_10 = `{
+    }`;
+let cite_10 = `{
       "id": "ITEM-6",
       "title": "Evaluating Components of International Migration: Consistency of 2000 Nativity Data",
       "note": "This cite illustrates the formatting of institutional authors.  Note that there is no \\"and\\" between the individual author and the institution with which he is affiliated.",
@@ -370,8 +362,8 @@ let cite_3 = ` {
         ]
       },
       "type": "book"
-    }`
-  let cite_11 = `{
+    }`;
+let cite_11 = `{
       "id": "ITEM-7",
       "title": "True Crime Radio and Listener Disenchantment with Network Broadcasting, 1935-1946",
       "author": [
@@ -392,8 +384,8 @@ let cite_3 = ` {
         ]
       },
       "type": "article-journal"
-    }`
-  let cite_12 = `{
+    }`;
+let cite_12 = `{
       "id": "ITEM-8",
       "title": "The Guantanamobile Project",
       "container-title": "Vectors",
@@ -417,8 +409,8 @@ let cite_3 = ` {
         ]
       },
       "type": "article-journal"
-    }`
-  let cite_13 = `{
+    }`;
+let cite_13 = `{
       "id": "ITEM-9",
       "container-title": "FEMS Yeast Research",
       "volume": "9",
@@ -463,8 +455,8 @@ let cite_3 = ` {
         ]
       },
       "type": "article-journal"
-    }`
-  let cite_14 = `{
+    }`;
+let cite_14 = `{
       "container-title": "N.Y.2d",
       "id": "ITEM-10",
       "issued": {
@@ -478,8 +470,8 @@ let cite_3 = ` {
       "title": "People v. Taylor",
       "type": "legal_case",
       "volume": 73
-    }`
-  let cite_15 = `{
+    }`;
+let cite_15 = `{
       "container-title": "N.E.2d",
       "id": "ITEM-11",
       "issued": {
@@ -493,8 +485,8 @@ let cite_3 = ` {
       "title": "People v. Taylor",
       "type": "legal_case",
       "volume": 541
-    }`
-  let cite_16 = `{
+    }`;
+let cite_16 = `{
       "container-title": "N.Y.S.2d",
       "id": "ITEM-12",
       "issued": {
@@ -508,232 +500,220 @@ let cite_3 = ` {
       "title": "People v. People",
       "type": "legal_case",
       "volume": 543
-    }`
-  /**/
+    }`;
+/**/
 
-
-    knex('reference').insert([
-      {
-      'guid': '8539d0c3-062a-45b5-b7d8-2840146b0698',
-      'subtype': 'Blog',
-      'notes': 'a Quite interesting blog',
-      'json': cite_1
-      },
-      {
-      'guid': 'eb00e2a0-bf46-4029-b2a6-5cdda85bc49c',
-      'subtype': 'Journal',
-      'notes': 'This is very cool too!',
-      'json': cite_2
-      },
-      {
-      'guid': 'fac2217f-23c9-4810-a9b1-760aefade82c',
-      'subtype': 'Book',
-      'notes': 'Very boring, but very bb',
-      'json': cite_3
-      },
-      {
-      'guid': '7b26ce94-ad8b-482b-8088-239af5c7902a',
-      'subtype': 'Paper',
-      'notes': 'This could work too... maybe',
-      'json': cite_4
-      },
-      {
-      'guid': 'bb4f1d81-f88e-4e54-9203-5497ca860a8e',
-      'subtype': 'Paper',
-      'notes': 'Bad!',
-      'json': cite_5
-      },
-      {
-      'guid': 'f3a819ef-d41d-47b5-99e8-473f0248da9c',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_6
-      },
-      {
-      'guid': '1',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_7
-    },
-
-      {
-      'guid': '2',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_8
-    },
-
-      {
-      'guid': '3',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_9
-    },
-
-      {
-      'guid': '4',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_10
-    },
-
-
-      {
-      'guid': '5',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_11
-    },
-
-      {
-      'guid': '6',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_12
-    },
-
-      {
-      'guid': '7',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_13
-    },
-
-      {
-      'guid': '8',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_14
-    },
-
-      {
-      'guid': '9',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_15
-    },
-
-      {
-      'guid': '10',
-      'subtype': 'Paper',
-      'notes': 'contains the world formula',
-      'json': cite_16
-    }
-
-  ])
-    .then(() => {
-      // Send a success message in response
-      console.log("reference insert: done!!")
-    })
-    .catch(err => {
-      // Send a error message in response
-      console.log("error: insert(reference)")
-    })
-
-
-    knex('ref_group').insert([
-      {
-      'guid': '1',
-      'name': '1. ABCD',
-      'type': 'folder'
-      },
-      {
-      'guid': '11',
-      'name': '1.1. ABCD',
-      'type': 'folder',
-      'parent': '1'
-      },
-      {
-      'guid': '12',
-      'name': '1.2. ABCD',
-      'type': 'list',
-      'parent': '1'
-      },
-      {
-      'guid': '13',
-      'name': '1.3. ABCD',
-      'type': 'list',
-      'parent': '1'
-      },
-      {
-      'guid': '2',
-      'name': '2. ABCD',
-      'type': 'folder'
-
-      },
-      {
-      'guid': '3',
-      'name': '3. ABCD',
-      'type': 'list'
-      },
-
-
-
-
-  ])
-    .then(() => {
-      // Send a success message in response
-      console.log("ref_group insert: done!")
-    })
-    .catch(err => {
-      // Send a error message in response
-      console.log("error: insert(reference)", err )
-    })
-
-
-
-
-    knex('referencePartOfGroup').insert([
-      {
-      'reference_id': '7b26ce94-ad8b-482b-8088-239af5c7902a',
-      'group_id': '13'
+knex("reference")
+  .insert([
+    {
+      guid: "8539d0c3-062a-45b5-b7d8-2840146b0698",
+      subtype: "Blog",
+      notes: "a Quite interesting blog",
+      json: cite_1,
     },
     {
-    'reference_id': '7b26ce94-ad8b-482b-8088-239af5c7902a',
-    'group_id': '12'
-  },
-  {
-  'reference_id': '8539d0c3-062a-45b5-b7d8-2840146b0698',
-  'group_id': '3'
-}
-,
-{
-'reference_id': '8539d0c3-062a-45b5-b7d8-2840146b0698',
-'group_id': '12'
-}
+      guid: "eb00e2a0-bf46-4029-b2a6-5cdda85bc49c",
+      subtype: "Journal",
+      notes: "This is very cool too!",
+      json: cite_2,
+    },
+    {
+      guid: "fac2217f-23c9-4810-a9b1-760aefade82c",
+      subtype: "Book",
+      notes: "Very boring, but very bb",
+      json: cite_3,
+    },
+    {
+      guid: "7b26ce94-ad8b-482b-8088-239af5c7902a",
+      subtype: "Paper",
+      notes: "This could work too... maybe",
+      json: cite_4,
+    },
+    {
+      guid: "bb4f1d81-f88e-4e54-9203-5497ca860a8e",
+      subtype: "Paper",
+      notes: "Bad!",
+      json: cite_5,
+    },
+    {
+      guid: "f3a819ef-d41d-47b5-99e8-473f0248da9c",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_6,
+    },
+    {
+      guid: "1",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_7,
+    },
 
+    {
+      guid: "2",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_8,
+    },
+
+    {
+      guid: "3",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_9,
+    },
+
+    {
+      guid: "4",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_10,
+    },
+
+    {
+      guid: "5",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_11,
+    },
+
+    {
+      guid: "6",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_12,
+    },
+
+    {
+      guid: "7",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_13,
+    },
+
+    {
+      guid: "8",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_14,
+    },
+
+    {
+      guid: "9",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_15,
+    },
+
+    {
+      guid: "10",
+      subtype: "Paper",
+      notes: "contains the world formula",
+      json: cite_16,
+    },
   ])
-    .then(() => {
-      // Send a success message in response
-      console.log("referencePartOfGroup insert: done!")
-    })
-    .catch(err => {
-      // Send a error message in response
-      console.log("error: insert(referencePartOfGroup)", err)
-    })
+  .then(() => {
+    // Send a success message in response
+    console.log("reference insert: done!!");
+  })
+  .catch((err) => {
+    // Send a error message in response
+    console.log("error: insert(reference)");
+  });
+
+knex("ref_group")
+  .insert([
+    {
+      guid: "1",
+      name: "1. ABCD",
+      type: "folder",
+    },
+    {
+      guid: "11",
+      name: "1.1. ABCD",
+      type: "folder",
+      parent: "1",
+    },
+    {
+      guid: "12",
+      name: "1.2. ABCD",
+      type: "list",
+      parent: "1",
+    },
+    {
+      guid: "13",
+      name: "1.3. ABCD",
+      type: "list",
+      parent: "1",
+    },
+    {
+      guid: "2",
+      name: "2. ABCD",
+      type: "folder",
+    },
+    {
+      guid: "3",
+      name: "3. ABCD",
+      type: "list",
+    },
+  ])
+  .then(() => {
+    // Send a success message in response
+    console.log("ref_group insert: done!");
+  })
+  .catch((err) => {
+    // Send a error message in response
+    console.log("error: insert(reference)", err);
+  });
+
+knex("referencePartOfGroup")
+  .insert([
+    {
+      reference_id: "7b26ce94-ad8b-482b-8088-239af5c7902a",
+      group_id: "13",
+    },
+    {
+      reference_id: "7b26ce94-ad8b-482b-8088-239af5c7902a",
+      group_id: "12",
+    },
+    {
+      reference_id: "8539d0c3-062a-45b5-b7d8-2840146b0698",
+      group_id: "3",
+    },
+    {
+      reference_id: "8539d0c3-062a-45b5-b7d8-2840146b0698",
+      group_id: "12",
+    },
+  ])
+  .then(() => {
+    // Send a success message in response
+    console.log("referencePartOfGroup insert: done!");
+  })
+  .catch((err) => {
+    // Send a error message in response
+    console.log("error: insert(referencePartOfGroup)", err);
+  });
 
 // Remove:
-    knex('author').insert([
-      {
-      'guid': '5435545',
-      'firstname': 'Gareth',
-      'lastname': 'Bilaney',
-      'role': 'Translator'
+knex("author")
+  .insert([
+    {
+      guid: "5435545",
+      firstname: "Gareth",
+      lastname: "Bilaney",
+      role: "Translator",
     },
     {
-    'guid': '65435545',
-    'firstname': 'Wolfski-Alex',
-    'lastname': 'Kirtschovski',
-    'role': 'Singer'
-  }
-
-
+      guid: "65435545",
+      firstname: "Wolfski-Alex",
+      lastname: "Kirtschovski",
+      role: "Singer",
+    },
   ])
-    .then(() => {
-      // Send a success message in response
-      console.log("success!")
-    })
-    .catch(err => {
-      // Send a error message in response
-      console.log("error: insert(reference)")
-    })
+  .then(() => {
+    // Send a success message in response
+    console.log("success!");
+  })
+  .catch((err) => {
+    // Send a error message in response
+    console.log("error: insert(reference)");
+  });

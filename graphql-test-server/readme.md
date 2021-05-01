@@ -1,8 +1,8 @@
 # CiteDrive server
 
-npm install
+yarn install
 
-npm start
+yarn start
 
 http://localhost:4000/graphql
 
